@@ -1,0 +1,39 @@
+<!doctype html>
+<title>Practice Sheet</title>
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+<div class=list>
+    <h1>Practice Sheet</h1>
+    <table>
+        <tr>
+            <th>Word</th>
+            <th>Meaning</th>
+        </tr>
+        {% for w in words %}
+        {% if 'w2m' in type %}
+        <tr>
+            <td class='w2m' id='word'>{{ w.word}}</td>
+            <td class='w2m' id='mean'></td>
+        </tr>
+        {% else %}
+        <tr>
+            <td class='m2w' id='word'></td>
+            <td class='m2w' id='mean'>{{ w.meaning|safe }}</td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+    </table>
+    <p style='page-break-before: always;'></p>
+    <h1>Answers</h1>
+    <table>
+        <tr>
+            <th>Word</th>
+            <th>Meaning</th>
+        </tr>
+        {% for w in words %}
+        <tr>
+            <td class='w2m' id='word'>{{ w.word}}</td>
+            <td class='m2w' id='mean'>{{ w.meaning|safe }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>

@@ -1,0 +1,52 @@
+
+body { 
+    background-image: url("img/newyork_background.jpg"); 
+    background-size: cover;
+}
+
+table { 
+    margin: auto;
+}
+
+tr { 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 20px; 
+    text-align: center;
+}
+
+.header { 
+    text-align: center;
+}
+
+.form { 
+    margin: auto; 
+    margin-top: 160px; 
+    width: 540px; 
+    height: 320px; 
+    padding-top: 2%; 
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.input { 
+    text-align: center; 
+    margin-top: 10px;
+}
+
+.list { 
+    font-size: 20px; 
+    text-align: center; 
+    margin-top: 47px;
+}
+
+.footer {
+    position: absolute; 
+    bottom: 0; 
+    left: 43%; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    text-align: center; 
+    margin: auto; 
+    width: 200px; 
+    height: 30px;
+}
+
+

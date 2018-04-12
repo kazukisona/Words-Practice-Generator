@@ -1,0 +1,40 @@
+
+.list { 
+    width: 1000px; 
+    margin: auto; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.list table {
+    display: table; 
+    border-collapse: collapse; 
+    margin: auto; 
+    table-layout: fixed;
+}
+
+.list h1 { 
+    text-align: center;
+}
+
+.list th, td { 
+    padding: 5px; 
+    font-size: 23px; 
+    border: 1px solid #ddd; 
+}
+
+.list tr:hover { 
+    background-color: #ddd;
+}
+
+.list th { 
+    background-color: #428bca; 
+    color: white;
+}
+
+td#word {
+    width: 200px;
+}
+
+td#mean {
+    width: 800px;
+}
