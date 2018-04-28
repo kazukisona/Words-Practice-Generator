@@ -1,14 +1,34 @@
-import sqlite3
+#import sqlite3
 import pdfkit
 import miningwords
 from flask import Flask, request, session, g, redirect, url_for, render_template, make_response
 
 # configuration
-DATABASE = 'words.db'
-DEBUG = False # should be True if in test or in development
-SECRET_KEY = 'your_secret_key'
-USERNAME = 'your_username'
-PASSWORD = 'your_password'
+# DATABASE = 'words.db'
+DEBUG = True # should be True if in test or in development
+#SECRET_KEY = 'your_secret_key'
+#USERNAME = 'your_username'
+#PASSWORD = 'your_password'
+
+POSTGRES = {
+    'user': 'kazuki',
+    'pw': '11ea487t',
+    'db': 'words',
+    'host': 'localhost',
+    'port': '5432',
+}
+
+SQLALCHEMY_DATABASE_URI = 'postgresql://%(user)s:%(pw)s@%(host)s:%(port)s/%(db)s' % POSTGRES
+
+db = SQLAlchemy(app)
+
+class GRE(db.Model):
+    __tablename__ = 'gre'
+    id = db.Column(db.Integer, primary_key=True)
+    word = db.Column(db.String(100))
+    meaning = db.Column(db.String(400))
+
+
 
 # create app   
 application = Flask(__name__)
