@@ -5,7 +5,7 @@ from flask import Flask, request, session, g, redirect, url_for, render_template
 
 # configuration
 DATABASE = 'words.db'
-DEBUG = True # should be True if in test or in development
+DEBUG = False # should be True if in test or in development
 SECRET_KEY = 'your_secret_key'
 USERNAME = 'your_username'
 PASSWORD = 'your_password'
